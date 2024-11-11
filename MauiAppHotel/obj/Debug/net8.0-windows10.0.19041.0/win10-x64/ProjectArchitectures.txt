@@ -1,0 +1,1 @@
+C:\Users\Marco\Downloads\dev\MauiAppHotel\MauiAppHotel\MauiAppHotel.csproj;x64

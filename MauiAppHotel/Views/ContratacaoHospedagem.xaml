@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
+             Title="ContratacaoHospedagem"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
+
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="BackgroundColor" Value="Black"/>
+            <Setter Property="WidthRequest" Value="100"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="HeightRequest" Value="45"/>
+        </Style>
+    </ContentPage.Resources>
+
+    
+    <VerticalStackLayout Padding="10">
+
+        <Label Text="DiáriaFácil" TextColor="Black" VerticalOptions="Start" FontSize="30" FontFamily="RobotoItalic"/>
+        <Label Text="Calcule a sua Diária de Hospedagem" TextColor="DarkGrey"  FontSize="20" FontFamily="RobotoItalic"/>
+
+
+        <Frame BorderColor="Black" BackgroundColor="DarkGrey" Margin="0,20,0,0">
+            <VerticalStackLayout>
+                <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*,*,2*" RowSpacing="3">
+
+                    <Label Grid.Row="0" Grid.Column="0" Text="Adultos" TextColor="Black" FontSize="20" />
+                    <Label Grid.Row="0" Grid.Column="1" TextColor="Red" Text="{Binding Value}" BindingContext="{x:Reference stp_adultos}" FontSize="20" Margin="22,0,0,0"/>
+                    <Stepper Grid.Row="0" Grid.Column="2" x:Name="stp_adultos" Minimum="1" Maximum="10"  Increment="1" BackgroundColor="Black" />
+
+                    <Label Grid.Row="1" Grid.Column="0" Text="Crianças" TextColor="Black" FontSize="19" />
+                    <Label Grid.Row="1" Grid.Column="1" TextColor="Red" Text="{Binding Value}" BindingContext="{x:Reference stp_crianca}" FontSize="20" Margin="22,0,0,0"/>
+                    <Stepper Grid.Row="1" Grid.Column="2" x:Name="stp_crianca" Minimum="1" Maximum="10" Increment="1" BackgroundColor="Black"/>
+
+                </Grid>
+
+                <Label Text="Escolha sua Suíte" TextColor="Black" Margin="0,10,0,0" FontSize="25"/>
+                <Picker  x:Name="pck_quarto" Title="Selecione sua acomodação" TextColor="Black" TitleColor="Azure" BackgroundColor="Azure" ItemDisplayBinding="{Binding Descricao}"/>
+
+                <Frame Padding="10" Margin="10" BackgroundColor="Gray">
+                    <VerticalStackLayout Padding="5">
+
+                        <Label Text="Periodo da Estadia" TextColor="Black" FontSize="20" HorizontalOptions="Start" />
+
+                        <HorizontalStackLayout Margin="0,10,0,0">
+                            <Label Text="Check-in" TextColor="Azure" FontSize="16" Margin="0,10,15,0"/>
+                            <DatePicker x:Name="dtpck_checkin" Format="dd/MM/yyyy" WidthRequest="125" DateSelected="dtpck_checkin_DateSelected"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout>
+                            <Label Text="Check-out" TextColor="Azure" FontSize="15" Margin="0,10,15,0"/>
+                            <DatePicker x:Name="dtcpk_checkout" Format="dd/MM/yyyy"/>
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+                </Frame>
+
+                    <Button Text="Avançar" Clicked="Button_Clicked" x:Name="btnAvancar"/>
+             
+
+            </VerticalStackLayout>
+
+        </Frame>
+
+
+
+        <Label Text="Sobre" TextColor="Black" FontSize="20" HorizontalOptions="Center">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </Label.GestureRecognizers>
+        </Label>
+
+
+
+
+
+    </VerticalStackLayout>
+    
+</ContentPage>

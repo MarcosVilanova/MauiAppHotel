@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre"
+             BackgroundColor="White">
+
+    <ScrollView Padding="20">
+        <VerticalStackLayout Spacing="15">
+
+            <StackLayout Orientation="Horizontal">
+                <Button Text="voltar"  HeightRequest="45" WidthRequest="50" ImageSource="download.png" Clicked="Button_Clicked"  BackgroundColor="Transparent"/>
+
+                <Label Text="Sobre o Aplicativo" FontSize="20" TextColor="Black"   Margin="30,7,0,0" FontAttributes="Bold" />
+            </StackLayout>
+
+
+            <Label Text="Este aplicativo foi desenvolvido para realizar cálculos de hospedagens. Abaixo, você encontrará informações sobre o desenvolvimento do aplicativo."
+                TextColor="Black" FontSize="15"/>
+
+            <Label Text="Desenvolvedor: Marcos Vilanova" TextColor="Black" FontSize="15"/>
+            <Label Text="Ano de Desenvolvimento: 2024" TextColor="Black" FontSize="15"/>
+            <Label Text="Versão: 1.0.0" TextColor="Black" FontSize="15"/>
+            <Label Text="Tecnologias Utilizadas: .NET MAUI, C#, XAML" TextColor="Black" FontSize="15"/>
+            <Label Text="Descrição: Este aplicativo foi criado para realizar cálculos de hospedagens." TextColor="Black" FontSize="15"/>
+
+            <Label Text="Agradecemos por usar nosso aplicativo. Esperamos que ele atenda às suas necessidades!" TextColor="Gray" FontSize="13" HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

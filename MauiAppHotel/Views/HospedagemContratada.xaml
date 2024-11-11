@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.HospedagemContratada"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
+
+
+    <VerticalStackLayout VerticalOptions="Start" >
+
+        <StackLayout Orientation="Horizontal">
+            <Button Text="voltar"  HeightRequest="45" WidthRequest="60" ImageSource="download.png" Clicked="Button_Clicked"  BackgroundColor="Transparent" Margin="0,0,0,0"/>
+        </StackLayout>
+
+        <Label Text="Suíte Super Luxo"
+               TextColor="Black"
+               FontSize="40"
+               HorizontalTextAlignment="Center"
+               Margin="0,50,0,0"/>
+        
+        <StackLayout Padding="10">
+            
+            
+        <Frame Margin="10" BackgroundColor="Gray" BorderColor="Transparent">
+            <StackLayout Orientation="Horizontal">
+                
+                 <HorizontalStackLayout Margin="40,0,0,0">
+                    <Label Text="Adultos: " FontSize="20"/>
+                        <Label Text=" 2"  FontSize="20" TextColor="White"/>
+                 </HorizontalStackLayout> 
+                
+                 <HorizontalStackLayout Margin="15,0,0,0">
+                    <Label Text="Crianças: "  FontSize="20"/>
+                    <Label Text="1"  FontSize="20" TextColor="White"/>
+                  </HorizontalStackLayout>
+                
+            </StackLayout>
+        </Frame>
+
+
+        <Frame Margin="10" BackgroundColor="Gray" BorderColor="Transparent">
+            <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,Auto,Auto">
+
+                <Label Grid.Row="0" Grid.Column="0" Text="Check-in: " FontSize="20"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="Check-out: " FontSize="19" />
+                <Label Grid.Row="2" Grid.Column="0" Text="Estadia: " FontSize="20"/>
+
+            </Grid>
+        </Frame>
+
+            <Frame Margin="10" BackgroundColor="Gray" BorderColor="Transparent" >
+
+            <HorizontalStackLayout>
+                <Label Text="Valor Total: " FontSize="20"/>
+                <Label Text=" RS 100"  FontSize="20"/>
+            </HorizontalStackLayout>
+
+        </Frame>
+        </StackLayout>
+
+
+    </VerticalStackLayout>
+</ContentPage>
